@@ -78,6 +78,30 @@
     padding: 160px 0 130px;
 }
 
+.sc-rooms .rooms-wrap {
+    display: flex;
+    justify-content: flex-end;
+    overflow: hidden;
+}
+
+.sc-rooms .rooms-wrap .ul {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    animation: marquee 20s linear infinite;
+    gap: 47px;
+}
+
+.sc-rooms .rooms-wrap .ul span {
+    position: relative;
+    display: block;
+    color: #000;
+    font-size: 140px;
+    line-height: 1.67;
+    white-space: nowrap;
+    z-index: 2;
+}
+
 .sc-rooms .txt-area {
     display: flex;
     gap: 30px;
