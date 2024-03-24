@@ -1,0 +1,44 @@
+@import url(/assets/css/reset.css);
+@import url(/assets/css/common.css);
+
+#header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    padding: 10px 0;
+}
+
+#header h1 {}
+
+#header h1 a {
+    width: 90px;
+    height: auto;
+    display: block;
+}
+
+#header .inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+#header .nav {
+    display: flex;
+    gap: 70px;
+    align-items: center;
+}
+
+#header .nav ul {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+}
+
+#header .nav ul li {}
+
+#header .nav ul li a {
+    font-size: 16px;
+}

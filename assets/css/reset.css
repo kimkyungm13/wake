@@ -1,0 +1,70 @@
+@font-face {
+    font-family: __montreal_1a83e5;
+    src: url(/assets/css/3eda5b7342ebb1a0-s.p.woff2) format("woff2");
+    font-display: swap;
+    font-weight: 400;
+    font-style: normal
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font: inherit;
+    color: inherit;
+    font-family: "__montreal_1a83e5",
+        "__montreal_Fallback_1a83e5", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+
+html,
+body {
+    height: 100%;
+}
+
+body,
+code {
+    font-size: 14px;
+    color: #222;
+    background: #fff;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+button {
+    background: none;
+    border: 0;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
