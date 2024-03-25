@@ -12,23 +12,14 @@ $(function () {
     gsap.to('.sc-rooms .rooms-wrap', {
         scrollTrigger: {
             trigger: ".sc-rooms",
-            start: "0% 0%",
+            start: "0% bottom",
             end: "100% 100%",
             scrub: 1,
             markers: true,
             invalidateOnRefresh: true,
-            onUpdate: function (self) {
 
-                step = Math.round(self.progress * 3);
-
-                $('.sc-rooms').attr('data-step', step + 1)
-
-                // if(self.progress > 0.5){
-                //     $('.asdas').text('')
-                // }
-            }
         },
-        xPercent: -100,
+        xPercent: -200,
         x: function () {
             return window.innerWidth;
         }
