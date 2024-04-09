@@ -25,9 +25,10 @@
 
 .sc-visual .visual-txt {
     display: flex;
-    z-index: 1;
     font-size: 140px;
-
+    padding: 100px 32px;
+    align-items: center;
+    height: 100vh;
 }
 
 .sc-visual .visual-txt .txt-wrap {
@@ -36,7 +37,13 @@
     align-items: flex-start;
     flex-wrap: wrap;
     gap: 0 18px;
-    color: #fff
+    color: #fff;
+    width: 100%;
+}
+
+.sc-visual .visual-txt .txt-wrap.txt-right {
+    align-self: end;
+    margin-bottom: 70px;
 }
 
 .sc-visual .visual-txt .txt-wrap [class*='txt-line0'] {
@@ -141,6 +148,8 @@
 .sc-rooms .txt-area {
     display: flex;
     gap: 30px;
+    justify-content: flex-end;
+    padding: 160px 32px
 }
 
 .sc-rooms .txt-area .tit {

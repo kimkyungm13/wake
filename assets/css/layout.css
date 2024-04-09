@@ -1,6 +1,12 @@
 @import url(/assets/css/reset.css);
 @import url(/assets/css/common.css);
 
+.inner {
+    max-width: 90rem;
+    margin: 0 auto;
+    ;
+}
+
 #header {
     position: fixed;
     top: 0;
@@ -8,6 +14,7 @@
     width: 100%;
     background: #fff;
     padding: 10px 0;
+    z-index: 2;
 }
 
 #header h1 {}
@@ -41,4 +48,38 @@
 
 #header .nav ul li a {
     font-size: 16px;
+}
+
+#footer {
+    padding: 60px 40px;
+}
+
+#footer .inner {}
+
+#footer .inner .footer-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer .inner .footer-wrapper>* {
+    font-size: 24px;
+}
+
+#footer .inner .footer-wrapper a img {
+    width: 230px;
+    height: auto;
+}
+
+#footer .inner .footer-wrapper .footer-menu ul,
+#footer .inner .footer-wrapper .footer-contact ul,
+#footer .inner .footer-wrapper .footer-sns ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#footer .inner .footer-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 200px;
 }
