@@ -431,3 +431,74 @@
 .sc-stage ul li .txt-wrap .info .desc {
     font-size: 16px;
 }
+
+.sc-book {
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+    padding: 6rem 1rem;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.sc-book .txt-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 3.75rem;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 5;
+    pointer-events: none;
+}
+
+.sc-book .txt-wrap .word {
+    display: flex;
+    gap: 20px;
+}
+
+.sc-book .txt-wrap .word>span:after {
+    content: "";
+    display: block;
+    margin: 0 auto;
+    width: 0;
+    height: .3125rem;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.45rem;
+    transition: all .2s ease-out;
+    opacity: 0;
+}
+
+.sc-book .txt-wrap .word>span {
+    position: relative;
+}
+
+.sc-book:hover .txt-wrap .word>span:after {
+    opacity: 1;
+    transform: translateZ(0);
+    width: 100%;
+}
+
+.sc-book .txt-wrap .word .txt-line01 {
+    display: flex;
+}
+
+.sc-book .txt-wrap .word .txt-line02 {
+    display: flex;
+}
+
+.sc-book .txt-wrap .word .txt-line03 {
+    display: flex;
+}
+
+.sc-book .txt-wrap .word span {
+    font-size: 120px;
+}
+
+.sc-book .txt-wrap .desc {
+    font-size: 24px;
+    max-width: 50%;
+    margin: 0 auto;
+}
