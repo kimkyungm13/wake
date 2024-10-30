@@ -1,0 +1,66 @@
+.inner {
+    padding: 0 60px;
+}
+
+.blind {
+    position: absolute;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    margin: -1px;
+    height: 1px;
+    width: 1px;
+}
+
+.btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #000;
+    color: #fff;
+    padding: 10px 15px;
+    font-size: 16px;
+    border-radius: 6px;
+}
+
+.btn-link:hover {}
+
+.link-line {
+    font-size: 16px;
+    padding: 8px 24px 8px 0;
+    color: #fff;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.link-line.dark {
+    font-size: 16px;
+    padding: 8px 24px 8px 0;
+    color: #000;
+    display: inline-block;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.link-line:hover {
+    opacity: 0.75;
+}
+
+.link-line.dark:after {
+    background: #000;
+}
+
+.link-line:after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background: #fff;
+    transition: all .15s ease-out .2s;
+}
+
+.link-line:hover:after {
+    width: 0;
+}
