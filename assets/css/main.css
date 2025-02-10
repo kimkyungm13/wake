@@ -223,7 +223,9 @@
 
 
 .sc-rooms .room-list ul .swiper-slide {
-    width: 50%;
+    /* width: 50%; */
+    opacity: 0;
+    transform: translateY(100%);
 }
 
 .sc-rooms .room-list ul .swiper-slide img {
@@ -231,6 +233,16 @@
     height: 100%;
     width: 100%;
     ;
+}
+
+.sc-rooms .room-list ul .swiper-slide.swiper-slide-next {}
+
+.sc-rooms .room-list ul .swiper-slide.swiper-slide-active,
+.sc-rooms .room-list ul .swiper-slide.swiper-slide-visible,
+.sc-rooms .room-list ul .swiper-slide.swiper-slide-prev {
+    opacity: 1;
+    transition: transform 0.5s;
+    transform: translateY(0%);
 }
 
 .sc-amenities .info {
@@ -263,6 +275,7 @@
     position: relative;
     border-top: 1px solid #000;
     padding: 30px 0;
+    /* overflow: hidden; */
 }
 
 .sc-amenities .list-wrap li h3 {
@@ -270,24 +283,52 @@
     width: 438px;
 }
 
+.sc-amenities .list-wrap li .info-wrap {
+    overflow: hidden;
+}
+
+.sc-amenities .list-wrap li:hover .info-more {
+    transform: translateY(0);
+    opacity: 1;
+}
+
 .sc-amenities .list-wrap li .info-more {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 20px;
+    transform: translateY(80%);
+    opacity: 0;
+    transition: all 0.4s
 }
 
 .sc-amenities .list-wrap li p {
     font-size: 16px;
 }
 
-.sc-amenities .list-wrap li .img-area {}
+
+
+.sc-amenities .list-wrap li:hover .img-area {
+    transform: translateY(0);
+    opacity: 1;
+}
 
 .sc-amenities .list-wrap li .img-area {
     position: absolute;
-    width: 300px;
+    width: 360px;
     right: 0;
     top: -35px;
+    height: 524px;
+    z-index: 10;
+    transform: translateY(20%);
+    opacity: 0;
+    transition: all 0.4s
+}
+
+.sc-amenities .list-wrap li .img-area img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 .sc-partner {

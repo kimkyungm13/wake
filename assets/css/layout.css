@@ -48,6 +48,16 @@
 
 #header .nav ul li a {
     font-size: 16px;
+    transition: all .1s ease-out
+}
+
+#header .nav ul:hover li a {
+    filter: blur(2px);
+}
+
+#header .nav ul li a:hover {
+    filter: none;
+    /* Hover된 요소의 blur 제거 */
 }
 
 #footer {

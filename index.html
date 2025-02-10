@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home • Wake</title>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <!-- Link Swiper's CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -147,43 +147,43 @@
                         <div class="marquee-unit"><span class="join__content-item">Rooms</span></div>
                     </div>
                 </div>
-                <div class="inner">
-                    <div class="txt-area">
-                        <span class="tit">(for short and long stays)
-                        </span>
-                        <div class="btn-area">
-                            <p class="desc">Discover and explore our <br>
-                                incredible 41 apartments<br> available in sizes S, M, L,<br>
-                                XL,
-                                XXL.
-                                You will find amenities<br> such as a
-                                gym, sauna,<br> swimming pool, and jacuzzi that <br>provide a luxury experience
-                                <br>while
-                                enjoying the
-                                best
-                                view
-                                of<br> Medellín
-                            </p>
-                            <a href="" class="btn-link">Discover all</a>
-                        </div>
+                <div class="txt-area">
+                    <span class="tit">(for short and long stays)
+                    </span>
+                    <div class="btn-area">
+                        <p class="desc">Discover and explore our <br>
+                            incredible 41 apartments<br> available in sizes S, M, L,<br>
+                            XL,
+                            XXL.
+                            You will find amenities<br> such as a
+                            gym, sauna,<br> swimming pool, and jacuzzi that <br>provide a luxury experience
+                            <br>while
+                            enjoying the
+                            best
+                            view
+                            of<br> Medellín
+                        </p>
+                        <a href="" class="btn-link">Discover all</a>
                     </div>
-                    <div class="navi">
-                        <p class="room-info">Find the ideal apartment to experience
-                            relaxation, savor enjoyment,<br> and
-                            perhaps
-                            even work remotely</p>
-                        <ul class="btn-wrap">
-                            <li class="btn btn-prev"><button></button></li>
-                            <li class="btn btn-next"><button></button></li>
-                        </ul>
-                    </div>
-                    <style>
-                        .room-group {
-                            position: relative;
-                            overflow: hidden;
-                        }
+                </div>
+                <div class="navi">
+                    <p class="room-info">Find the ideal apartment to experience
+                        relaxation, savor enjoyment,<br> and
+                        perhaps
+                        even work remotely</p>
+                    <ul class="btn-wrap">
+                        <li class="btn btn-prev"><button></button></li>
+                        <li class="btn btn-next"><button></button></li>
+                    </ul>
+                </div>
+                <style>
+                    .room-group {
+                        position: relative;
+                        overflow: hidden;
+                        padding: 0 180px;
+                    }
 
-                        /* .cursor {
+                    /* .cursor {
                             position: fixed;
                             top: 0;
                             left: 0;
@@ -199,156 +199,157 @@
                             justify-content: center;
                             border-radius: 9999px;
                         } */
-                        .cursor {
-                            position: relative;
-                            z-index: 100;
-                            pointer-events: none;
-                            display: flex;
-                            align-items: center;
-                            /* transition: all 0.5s; */
-                            cursor: none;
-                        }
+                    .cursor {
+                        position: fixed;
+                        top: 0;
+                        left: 0;
+                        z-index: 100;
+                        pointer-events: none;
+                        display: flex;
+                        align-items: center;
+                        /* transition: all 0.5s; */
+                        cursor: none;
+                    }
 
-                        .cursor .text {
-                            width: 100px;
-                            height: 100px;
-                            border-radius: 50%;
-                            pointer-events: none;
-                            z-index: 9999;
-                            background: #000;
-                            position: absolute;
-                            top: 10px;
-                            left: 10px;
-                            font-weight: 400;
-                            font-size: 24px;
-                            display: flex;
-                            align-items: center;
-                            justify-content: center;
-                            color: #fff;
-                            /* visibility: hidden; */
-                        }
+                    .cursor .text {
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                        pointer-events: none;
+                        z-index: 9999;
+                        background: #000;
+                        position: absolute;
+                        top: 10px;
+                        left: 10px;
+                        font-weight: 400;
+                        font-size: 24px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: #fff;
+                        /* visibility: hidden; */
+                    }
 
-                        .cursor .on {
-                            display: none;
-                        }
+                    .cursor .on {
+                        display: none;
+                    }
 
-                        .cursor .on .icon {
-                            display: flex;
-                            gap: 10px;
-                        }
+                    .cursor .on .icon {
+                        display: flex;
+                        gap: 10px;
+                    }
 
-                        .cursor .over.active,
-                        .cursor .on.active {
-                            display: block;
-                        }
+                    .cursor .over.active,
+                    .cursor .on.active {
+                        display: block;
+                    }
 
-                        .cursor .over {
-                            display: none;
-                        }
+                    .cursor .over {
+                        display: none;
+                    }
 
-                        .swiper-slide>* {
-                            pointer-events: none;
-                        }
-                    </style>
-                    <div class="room-group">
-                        <div class="cursor">
-                            <div class="text">
-                                <span class="over active">Drag</span>
-                                <span class="on">
-                                    <div class="icon">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <line x1="19" y1="12" x2="5" y2="12"></line>
-                                            <polyline points="12 19 5 12 12 5"></polyline>
-                                        </svg>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32"
-                                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
-                                            stroke-linecap="round" stroke-linejoin="round">
-                                            <line x1="5" y1="12" x2="19" y2="12"></line>
-                                            <polyline points="12 5 19 12 12 19"></polyline>
-                                        </svg>
-                                    </div>
-                                </span>
-                            </div>
+                    .swiper-slide>* {
+                        pointer-events: none;
+                    }
+                </style>
+                <div class="room-group">
+                    <div class="cursor">
+                        <div class="text">
+                            <span class="over active">Drag</span>
+                            <span class="on">
+                                <div class="icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                                        <polyline points="12 19 5 12 12 5"></polyline>
+                                    </svg>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24"
+                                        fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </div>
+                            </span>
                         </div>
-                        <div class="swiper room-list">
-                            <ul class="swiper-wrapper">
-                                <li class="swiper-slide ">
-                                    <img src="./assets/images/5c007425-8f74-4bb2-b1a7-a80e857618dc_comfort-balcony-loft-countertop.jpg"
-                                        alt="">
-                                    <div class="txt-wrap">
-                                        <span class="tit">Comfort Balcony Loft</span>
-                                        <div class="info-wrap">
-                                            <p class="info">Welcome to our modern one-room apartment with a balcony and
-                                                a
-                                                luxurious
-                                                Jacuzzi. Enjoy stunning views of the city from
-                                                the balcony or unwind in the Jacuzzi.</p>
-                                            <a href="" class="link-line dark">See details</a>
-                                        </div>
+                    </div>
+                    <div class="swiper room-list">
+                        <ul class="swiper-wrapper">
+                            <li class="swiper-slide ">
+                                <img src="./assets/images/5c007425-8f74-4bb2-b1a7-a80e857618dc_comfort-balcony-loft-countertop.jpg"
+                                    alt="">
+                                <div class="txt-wrap">
+                                    <span class="tit">Comfort Balcony Loft</span>
+                                    <div class="info-wrap">
+                                        <p class="info">Welcome to our modern one-room apartment with a balcony and
+                                            a
+                                            luxurious
+                                            Jacuzzi. Enjoy stunning views of the city from
+                                            the balcony or unwind in the Jacuzzi.</p>
+                                        <a href="" class="link-line dark">See details</a>
                                     </div>
-                                </li>
-                                <li class="swiper-slide ">
-                                    <img src="./assets/images/650689f8fbd9a45bcec7fe36_livingroom.jpg" alt="">
-                                    <div class="txt-wrap">
-                                        <span class="tit">Family Penthouse</span>
-                                        <div class="info-wrap">
-                                            <p class="info">Welcome to our spectacular Penthouse, featuring not one but
-                                                two
-                                                terraces, two fully equipped kitchens, a private
-                                                Jacuzzi, and a refreshing pool!</p>
-                                            <a href="" class="link-line dark">See details</a>
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="./assets/images/650689f8fbd9a45bcec7fe36_livingroom.jpg" alt="">
+                                <div class="txt-wrap">
+                                    <span class="tit">Family Penthouse</span>
+                                    <div class="info-wrap">
+                                        <p class="info">Welcome to our spectacular Penthouse, featuring not one but
+                                            two
+                                            terraces, two fully equipped kitchens, a private
+                                            Jacuzzi, and a refreshing pool!</p>
+                                        <a href="" class="link-line dark">See details</a>
                                     </div>
-                                </li>
-                                <li class="swiper-slide ">
-                                    <img src="./assets/images/65068433fbd9a45bcec7fe2c_livingroom-day.jpg" alt="">
-                                    <div class="txt-wrap">
-                                        <span class="tit">Deluxe Balcony apartment</span>
-                                        <div class="info-wrap">
-                                            <p class="info">Stylish two-room apartment with a balcony and a relaxing
-                                                Jacuzzi!
-                                                This
-                                                spacious and modern apartment is perfect for
-                                                those who want to experience upscale living and comfort.</p>
-                                            <a href="" class="link-line dark">See details</a>
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="./assets/images/65068433fbd9a45bcec7fe2c_livingroom-day.jpg" alt="">
+                                <div class="txt-wrap">
+                                    <span class="tit">Deluxe Balcony apartment</span>
+                                    <div class="info-wrap">
+                                        <p class="info">Stylish two-room apartment with a balcony and a relaxing
+                                            Jacuzzi!
+                                            This
+                                            spacious and modern apartment is perfect for
+                                            those who want to experience upscale living and comfort.</p>
+                                        <a href="" class="link-line dark">See details</a>
                                     </div>
-                                </li>
-                                <li class="swiper-slide ">
-                                    <img src="./assets/images/65021f70fbd9a45bcec7fc7e_room-night.jpg" alt="">
-                                    <div class="txt-wrap">
-                                        <span class="tit">Exclusive pool Suite</span>
-                                        <div class="info-wrap">
-                                            <p class="info">An exquisite two-room apartment with a private pool and
-                                                terrace!
-                                                This
-                                                stunning apartment offers the perfect blend of
-                                                elegance and comfort, with a spacious living area that opens up to a
-                                                beautiful
-                                                terrace</p>
-                                            <a href="" class="link-line dark">See details</a>
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="./assets/images/65021f70fbd9a45bcec7fc7e_room-night.jpg" alt="">
+                                <div class="txt-wrap">
+                                    <span class="tit">Exclusive pool Suite</span>
+                                    <div class="info-wrap">
+                                        <p class="info">An exquisite two-room apartment with a private pool and
+                                            terrace!
+                                            This
+                                            stunning apartment offers the perfect blend of
+                                            elegance and comfort, with a spacious living area that opens up to a
+                                            beautiful
+                                            terrace</p>
+                                        <a href="" class="link-line dark">See details</a>
                                     </div>
-                                </li>
-                                <li class="swiper-slide ">
-                                    <img src="./assets/images/5c007425-8f74-4bb2-b1a7-a80e857618dc_comfort-balcony-loft-countertop.jpg"
-                                        alt="">
-                                    <div class="txt-wrap">
-                                        <span class="tit">Comfort Balcony Loft</span>
-                                        <div class="info-wrap">
-                                            <p class="info">Modern one-room apartment with a balcony and a luxurious
-                                                Jacuzzi.
-                                                Enjoy
-                                                stunning views of the city from the balcony or
-                                                unwind in the Jacuzzi.</p>
-                                            <a href="" class="link-line dark">See details</a>
-                                        </div>
+                                </div>
+                            </li>
+                            <li class="swiper-slide ">
+                                <img src="./assets/images/5c007425-8f74-4bb2-b1a7-a80e857618dc_comfort-balcony-loft-countertop.jpg"
+                                    alt="">
+                                <div class="txt-wrap">
+                                    <span class="tit">Comfort Balcony Loft</span>
+                                    <div class="info-wrap">
+                                        <p class="info">Modern one-room apartment with a balcony and a luxurious
+                                            Jacuzzi.
+                                            Enjoy
+                                            stunning views of the city from the balcony or
+                                            unwind in the Jacuzzi.</p>
+                                        <a href="" class="link-line dark">See details</a>
                                     </div>
-                                </li>
-                            </ul>
-                        </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
@@ -368,9 +369,11 @@
                     <ul class="list-wrap">
                         <li>
                             <h3>Wake Park</h3>
-                            <div class="info-more">
-                                <p>An amazing place, surrounded by nature, fresh air <br>and cool design.</p>
-                                <a href="" class="link-line dark">See datails</a>
+                            <div class="info-wrap">
+                                <div class="info-more">
+                                    <p>An amazing place, surrounded by nature, fresh air <br>and cool design.</p>
+                                    <a href="" class="link-line dark">See datails</a>
+                                </div>
                             </div>
                             <div class="img-area"><img
                                     src="./assets/images/4174fb69-9daa-4c2c-b2d3-49018e3d2c7c_wake-park-logo.jpg"
@@ -379,9 +382,11 @@
                         </li>
                         <li>
                             <h3>Amenities Floor</h3>
-                            <div class="info-more">
-                                <p>The perfect place to enjoy and have the best view <br>from Medellín.</p>
-                                <a href="" class="link-line dark">See datails</a>
+                            <div class="info-wrap">
+                                <div class="info-more">
+                                    <p>The perfect place to enjoy and have the best view <br>from Medellín.</p>
+                                    <a href="" class="link-line dark">See datails</a>
+                                </div>
                             </div>
                             <div class="img-area"><img src="./assets/images/6506277afbd9a45bcec7fe0c_piscina.jpg"
                                     alt="">
@@ -389,12 +394,15 @@
                         </li>
                         <li>
                             <h3>Wake Hall</h3>
-                            <div class="info-more">
-                                <p>The perfect place to be surrounded by people who<br> visit our place lately and enjoy
-                                    natural
-                                    light.
-                                </p>
-                                <a href="" class="link-line dark">See datails</a>
+                            <div class="info-wrap">
+                                <div class="info-more">
+                                    <p>The perfect place to be surrounded by people who<br> visit our place lately and
+                                        enjoy
+                                        natural
+                                        light.
+                                    </p>
+                                    <a href="" class="link-line dark">See datails</a>
+                                </div>
                             </div>
                             <div class="img-area"><img src="./assets/images/654a46a10b105250cf53e7d1_wake-hall.jpg"
                                     alt="">

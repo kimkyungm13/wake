@@ -14,22 +14,23 @@ $(function () {
     //     })
     // });
     const scChargers = document.querySelector('.sc-rooms .room-list');
-    const projectCursor = $('.cursor');
-    // gsap.set(projectCursor, { scale: 5, autoAlpha: 0 })
-    $(scChargers).mousemove(function (e) {
-        x = e.clientX;
-        y = e.clientY
-        // $('.sc-chargers .custom-cursor').addClass('on');
-        gsap.set(projectCursor, {
-            // autoAlpha: 1,
-            // scale: 1,
-            x: x, y: y
-        })
-    })
-    $(scChargers).mouseleave(function () {
-        // $('.sc-chargers .custom-cursor').removeClass('on');
-        // gsap.to(projectCursor, { scale: 5, autoAlpha: 0 })
-    })
+    // const projectCursor = $('.cursor');
+    // // gsap.set(projectCursor, { scale: 5, autoAlpha: 0 })
+    // $(scChargers).mousemove(function (e) {
+    //     x = e.clientX;
+    //     y = e.clientY
+    //     // $('.sc-chargers .custom-cursor').addClass('on');
+    //     gsap.set(projectCursor, {
+    //         // autoAlpha: 1,
+    //         // scale: 1,
+    //         x: x,
+    //          y: y
+    //     })
+    // })
+    // $(scChargers).mouseleave(function () {
+    //     // $('.sc-chargers .custom-cursor').removeClass('on');
+    //     // gsap.to(projectCursor, { scale: 5, autoAlpha: 0 })
+    // })
 
 
     /**main visual */
@@ -69,23 +70,69 @@ $(function () {
         },
     });
 
-    roomSlide.on('touchMove', function (e) {
-        $('.cursor .over').removeClass('active')
-        $('.cursor .on').addClass('active')
-        // console.log(document);
+    // roomSlide.on('touchMove', function (e) {
+    //     $('.cursor .over').removeClass('active')
+    //     $('.cursor .on').addClass('active')
+    //     let x = roomSlide.touches.currentX;
+    //     let y = roomSlide.touches.currentY;
 
-    })
-    roomSlide.on('touchEnd', function () {
-        $('.cursor .over').addClass('active');
-        $('.cursor .on').removeClass('active')
-    })
+    //     console.log(x);
+    //     console.log(y);
+
+    // gsap.set(projectCursor, {
+    //     x: x,
+    //     // y: y
+    // });
+
+    // console.log(x);
+    // console.log(y);
+
+    // gsap.set(projectCursor, {
+    //     x: x,
+    //     y: y
+    // });
 
 
-
-
-    // $(document).mousemove(function(e){
 
     // })
+    // roomSlide.on('touchEnd', function () {
+    //     $('.cursor .over').addClass('active');
+    //     $('.cursor .on').removeClass('active')
+    // })
+
+
+
+
+    const cursor = document.querySelector(".cursor");
+    const pos = { x: window.innerWidth / 2, y: window.innerHeight / 2 };
+    const mouse = { x: pos.x, y: pos.y };
+    const speed = 1;
+
+    const xSet = gsap.quickSetter(cursor, "x", "px");
+    const ySet = gsap.quickSetter(cursor, "y", "px");
+
+    window.addEventListener("pointermove", e => {
+        console.log(e);
+        mouse.x = e.x;
+        mouse.y = e.y;
+        const dt = 1.0 - Math.pow(1.0 - speed, gsap.ticker.deltaRatio());
+        pos.x += (mouse.x - pos.x) * dt;
+        pos.y += (mouse.y - pos.y) * dt;
+        xSet(pos.x);
+        ySet(pos.y);
+    });
+
+    // gsap.set(".cursor", {xPercent: -50, yPercent: -50});
+    // gsap.ticker.add(() => {
+
+    // });
+
+
+
+
+
+
+
 
 
 
