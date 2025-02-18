@@ -103,6 +103,7 @@
     top: 0;
     left: 50%;
     margin-left: 21px;
+
 }
 
 .sc-about .purpose .txt-area .tit {
@@ -118,11 +119,13 @@
 
 .sc-about .purpose .img-area .img-pur01 {
     width: 428px;
+
 }
 
 .sc-about .purpose .img-area .img-pur02 {
     height: 520px;
     margin-top: 300px;
+
 }
 
 .sc-rooms {
@@ -183,7 +186,7 @@
 .sc-rooms .navi {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 40px;
+    padding: 40px 180px;
 }
 
 .sc-rooms .navi .room-info {
@@ -333,17 +336,29 @@
 
 .sc-partner {
     position: relative;
-    /* height: 600vh; */
-    padding: 300px 0;
     background: #000;
+    padding-bottom: 200px;
 }
 
-.sc-partner .sticky {}
+.sc-partner .sticky {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .sc-partner .sticky h2 {
     color: #fff;
     font-size: 120px;
     text-align: center;
+}
+
+.sc-partner .brand-list {
+    position: relative;
+    padding: 0 200px;
+    z-index: 1;
 }
 
 .sc-partner .brand-list .brand-sub {
@@ -358,6 +373,7 @@
 .sc-partner .brand-list ul {
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 .sc-partner .brand-list ul li {

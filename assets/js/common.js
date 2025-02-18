@@ -48,13 +48,32 @@ $(function () {
         trigger: '.sc-about',
         start: '0 70%',
         end: '100% 100%',
-        markers: true,
+        // markers: true,
         onEnter: function () {
             gsap.to('.sc-about .desc p', { autoAlpha: 1, yPercent: -100 })
         }
     },)
 
-
+    aboutTl = gsap.timeline({
+        scrollTrigger: {
+            trigger: '.sc-about .purpose',
+            start: '0% 60%',
+            end: "100% 100%",
+            scrub: 0,
+            // markers: true
+        },
+    }
+    );
+    aboutTl.from('.sc-about .img-pur01', {
+        autoAlpha: 0,
+        yPercent: 10
+    }).from('.sc-about .img-pur02', {
+        autoAlpha: 0,
+        yPercent: 10
+    }).from('.sc-about .txt-area', {
+        autoAlpha: 0,
+        yPercent: 10
+    })
     var roomSlide = new Swiper(".room-list", {
         // slidesPerView: "auto",
         spaceBetween: 30,
@@ -121,28 +140,27 @@ $(function () {
         xSet(pos.x);
         ySet(pos.y);
     });
-
+    $('.sc-rooms .room-group').mouseover(function () {
+        gsap.to('.cursor', {
+            autoAlpha: 1
+        })
+    })
+    $('.sc-rooms .room-group').mouseleave(function () {
+        gsap.to('.cursor', {
+            autoAlpha: 0
+        })
+    })
     // gsap.set(".cursor", {xPercent: -50, yPercent: -50});
     // gsap.ticker.add(() => {
 
     // });
-
-
-
-
-
-
-
-
-
-
 
     gsap.to('.sc-rooms .rooms-wrap', {
         scrollTrigger: {
             trigger: ".sc-rooms",
             start: "0% bottom",
             end: "100% 100%",
-            scrub: 1,
+            scrub: 0,
             // markers: true,
             invalidateOnRefresh: true,
 
@@ -151,5 +169,16 @@ $(function () {
         // x: function () {
         //     return window.innerWidth;
         // }
+    })
+    gsap.to('.sc-partner h2', {
+        scrollTrigger: {
+            trigger: '.sc-partner',
+            start: '0% 0%',
+            end: '100% 100%',
+            scrub: 0,
+            // markers: true
+        },
+        'filter': 'blur(20px)',
+        autoAlpha: 0
     })
 });
